@@ -28,7 +28,7 @@ const Navbar = () => {
     router.refresh();
   };
   return (
-    <div className="py-4 gap-3 border-x border-[#cfcfcf] border-dashed px-2 flex items-center bg-[#f5f5f5cc] sticky backdrop-blur-sm top-0 w-full text-sm font-medium tracking-[-0.01em] text-[#1b1c1d]  ">
+    <div className="z-20 py-4 gap-3 border-x border-[#cfcfcf] border-dashed px-2 flex items-center bg-[#f5f5f5cc] sticky backdrop-blur-sm top-0 w-full text-sm font-medium tracking-[-0.01em] text-[#1b1c1d]  ">
       <button
         style={{ textDecoration: locale == "en" ? "underline" : "none" }}
         className="cursor-pointer"
