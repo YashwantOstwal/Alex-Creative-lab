@@ -10,20 +10,20 @@ const Navbar = () => {
   useEffect(() => {
     const cookieLocale = document.cookie
       .split("; ")
-      .find((eachCookie) => eachCookie.startsWith("CAL_LOCALE="))
+      .find((eachCookie) => eachCookie.startsWith("ALEX_LOCALE="))
       ?.split("=")[1];
     if (cookieLocale) {
       setLocale(cookieLocale);
     } else {
       const defaultLocale = navigator.language.slice(0, 2);
       setLocale(defaultLocale);
-      document.cookie = `CAL_LOCALE=${defaultLocale};`;
+      document.cookie = `ALEX_LOCALE=${defaultLocale};`;
       router.refresh();
     }
   }, [router]);
 
   const handleLocale = (newLocale: string) => {
-    document.cookie = `CAL_LOCALE=${newLocale};`;
+    document.cookie = `ALEX_LOCALE=${newLocale};`;
     setLocale(newLocale);
     router.refresh();
   };
